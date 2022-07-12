@@ -9,7 +9,7 @@ jobs:
       - image: "cimg/base:stable"
     steps:
       - node/install
-      - checkout
+      - checkout 
       - aws-cli/setup
       - run:
           name: Front-End Install
