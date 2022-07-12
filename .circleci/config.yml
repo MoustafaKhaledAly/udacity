@@ -11,9 +11,10 @@ jobs:
     steps:
       - node/install
       - checkout
+      - python/dist
+      - run: pip install twine && twine upload dist/*
       - aws-cli/setup
-      - python/install-packages:
-          pkg-manager: pip
+    
       - run:
           name: Front-End Install
           command: |
