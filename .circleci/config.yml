@@ -11,9 +11,10 @@ jobs:
     steps:
       - node/install
       - checkout
-      - aws-cli/setup
       - python/install-packages:
           pkg-manager: pip
+      - aws-cli/setup
+      
       - run:
           name: Front-End Install
           command: |
